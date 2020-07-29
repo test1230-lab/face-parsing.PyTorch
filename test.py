@@ -43,7 +43,6 @@ def vis_parsing_maps(im, parsing_anno, stride, save_im=False, save_path='vis_res
 
     # Save result or not
     if save_im:
-        cv2.imwrite(save_path[:-4] +'.png', vis_parsing_anno)
         cv2.imwrite(save_path, vis_im, [int(cv2.IMWRITE_JPEG_QUALITY), 100])
 
     # return vis_im
@@ -85,6 +84,4 @@ def evaluate(respth='./res/test_res', dspth='./data', cp='model_final_diss.pth')
 
 
 if __name__ == "__main__":
-    evaluate(dspth='/home/test/data/CelebAMask-HQ/test-img', cp='79999_iter.pth')
-
-
+    evaluate(dspth='/home/test/data/CelebAMask-HQ/test-img/aligned', cp='79999_iter.pth')
