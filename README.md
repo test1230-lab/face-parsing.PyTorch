@@ -2,7 +2,7 @@
 
 <p align="center">
 	<a href="https://github.com/zllrunning/face-parsing.PyTorch">
-    <img class="page-image" src="https://github.com/zllrunning/face-parsing.PyTorch/blob/master/6.jpg" >
+    <img class="page-image" src="https://media.discordapp.net/attachments/719433414083870741/738104460051480606/gifntext-gif.gif" >
 	</a>
 </p>
 
