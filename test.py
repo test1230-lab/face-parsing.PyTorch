@@ -84,4 +84,6 @@ def evaluate(respth='./res/test_res', dspth='./data', cp='model_final_diss.pth')
 
 
 if __name__ == "__main__":
-    evaluate(dspth='/home/test/data/CelebAMask-HQ/test-img/aligned', cp='79999_iter.pth')
+    evaluate(dspth='data/aligned', cp='79999_iter.pth')
+
+
