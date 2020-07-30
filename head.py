@@ -19,7 +19,7 @@ if value == '?':
 	print("outputs semi-transparent mask on the image. Example: https://imgur.com/a/bPbKbvF")
 	value = input("test mode? y/n/? ")
 if value == 'y':
-	a = (0.6)
+	a = (0.4)
 	b=(0.3)
 	c=(1)
 if value == 'n':
