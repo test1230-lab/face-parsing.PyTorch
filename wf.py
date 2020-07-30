@@ -12,6 +12,23 @@ import numpy as np
 from PIL import Image
 import torchvision.transforms as transforms
 import cv2
+#im an idiot
+print("wf mask generator")
+value = input("test mode? y/n/? ")
+if value == '?':
+	print("outputs semi-transparent mask on the image. Example: https://imgur.com/a/bPbKbvF")
+	value = input("test mode? y/n/? ")
+if value == 'y':
+	a = (0.6)
+	b=(0.1)
+	c=(1)
+if value == 'n':
+	a = (0)
+	b=(1)
+	c= (0)
+print(a)
+print(b)
+print(c)
 
 def vis_parsing_maps(im, parsing_anno, stride, save_im=False, save_path='vis_results/parsing_map_on_im.jpg'):
     # Colors for all 20 parts
@@ -39,7 +56,7 @@ def vis_parsing_maps(im, parsing_anno, stride, save_im=False, save_path='vis_res
 
     vis_parsing_anno_color = vis_parsing_anno_color.astype(np.uint8)
     # print(vis_parsing_anno_color.shape, vis_im.shape)
-    vis_im = cv2.addWeighted(cv2.cvtColor(vis_im, cv2.COLOR_RGB2BGR), 0, vis_parsing_anno_color, 1, 0)
+    vis_im = cv2.addWeighted(cv2.cvtColor(vis_im, cv2.COLOR_RGB2BGR), (a), vis_parsing_anno_color, (b), (c))
 
     # Save result or not
     if save_im:
@@ -85,5 +102,3 @@ def evaluate(respth='./res/test_res', dspth='./data', cp='model_final_diss.pth')
 
 if __name__ == "__main__":
     evaluate(dspth='data/aligned', cp='79999_iter.pth')
-
-
