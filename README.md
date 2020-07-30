@@ -36,6 +36,12 @@ If you do not wish to train the model, you can download [our pre-trained model](
 # evaluate using GPU
 python test.py
 ```
+<p align="center">
+	<a href="https://github.com/zllrunning/face-parsing.PyTorch">
+    <img class="page-image" src="https://media.discordapp.net/attachments/719433414083870741/738160973126303864/ezgif.com-gif-maker.gif" >
+	</a>
+</p>
+
 
 
 
