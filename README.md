@@ -6,6 +6,12 @@
 	</a>
 </p>
 
+<p align="center">
+	<a href="https://github.com/zllrunning/face-parsing.PyTorch">
+    <img class="page-image" src="https://tenor.com/95SL.gif" >
+	</a>
+</p>
+
 ### Contents
 - [Training](#training)
 - [Demo](#Demo)
