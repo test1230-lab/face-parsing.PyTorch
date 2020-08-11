@@ -57,7 +57,7 @@ def train():
     n_img_per_gpu = 16
     n_workers = 8
     cropsize = [448, 448]
-    data_root = '/home/zll/data/CelebAMask-HQ/'
+    data_root = '/data/set/CelebAMask-HQ/'
 
     ds = FaceMask(data_root, cropsize=cropsize, mode='train')
     sampler = torch.utils.data.distributed.DistributedSampler(ds)
@@ -164,7 +164,7 @@ def train():
                 state = net.module.state_dict() if hasattr(net, 'module') else net.state_dict()
                 if dist.get_rank() == 0:
                     torch.save(state, './res/cp/{}_iter.pth'.format(it))
-                evaluate(dspth='/home/zll/data/CelebAMask-HQ/test-img', cp='{}_iter.pth'.format(it))
+                evaluate(dspth='data/eval', cp='{}_iter.pth'.format(it))
 
     #  dump the final model
     save_pth = osp.join(respth, 'model_final_diss.pth')
