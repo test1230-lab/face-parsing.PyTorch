@@ -2,8 +2,8 @@
 # -*- encoding: utf-8 -*-
 
 
-from PIL import Image
-import PIL.ImageEnhance as ImageEnhance
+from PIL import Image, ImageEnhance
+import PIL
 import random
 import numpy as np
 
