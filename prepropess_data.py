@@ -7,9 +7,9 @@ import cv2
 from transform import *
 from PIL import Image
 
-face_data = '/data/CelebAMask-HQ/CelebA-HQ-img'
-face_sep_mask = '/data/CelebAMask-HQ/CelebAMask-HQ-mask-anno'
-mask_path = '/data/CelebAMask-HQ/mask'
+face_data = '/home/test/face-parsing.PyTorch/data/set/CelebAMask-HQ/CelebA-HQ-img/'
+face_sep_mask = '/home/test/face-parsing.PyTorch/data/set/CelebAMask-HQ/CelebAMask-HQ-mask-anno/WF_MASK/'
+mask_path = '/home/test/face-parsing.PyTorch/data/set/CelebAMask-HQ/mask/'
 counter = 0
 total = 0
 for i in range(15):

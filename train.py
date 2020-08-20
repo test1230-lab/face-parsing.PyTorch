@@ -40,9 +40,9 @@ def parse_args():
             )
     return parse.parse_args()
 
-
 def train():
     args = parse_args()
+
     torch.cuda.set_device(args.local_rank)
     dist.init_process_group(
                 backend = 'nccl',
@@ -57,7 +57,7 @@ def train():
     n_img_per_gpu = 16
     n_workers = 8
     cropsize = [448, 448]
-    data_root = '/data/set/CelebAMask-HQ/'
+    data_root = '/home/test/face-parsing.PyTorch/data/set/CelebAMask-HQ/'
 
     ds = FaceMask(data_root, cropsize=cropsize, mode='train')
     sampler = torch.utils.data.distributed.DistributedSampler(ds)
