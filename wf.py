@@ -12,7 +12,7 @@ import numpy as np
 from PIL import Image
 import torchvision.transforms as transforms
 import cv2
-#im an idiot
+#change to argparse
 print("wf mask generator")
 value = input("test mode? y/n/? ")
 if value == '?':
